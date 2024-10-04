@@ -45,11 +45,7 @@ module.exports.run = async function({ api, event, args }) {
         const aiResponse = response.data.gemini; // Accessing the "gemini" key directly
 
         const formattedResponse = `
-✨ 𝙶𝚎𝚖𝚒𝚗𝚒 𝚁𝚎𝚜𝚙𝚘𝚗𝚜𝚎
-━━━━━━━━━━━━━━━━━━
 ${aiResponse.trim()}
-━━━━━━━━━━━━━━━━━━
--𝙲𝚑𝚒𝚕𝚕𝚒 𝙼𝚊𝚗𝚜𝚒
         `;
 
         await api.editMessage(formattedResponse.trim(), initialMessage.messageID);
